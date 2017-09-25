@@ -28,8 +28,10 @@ public class TUMOnlineAnmeldungDemo3 {
     }
 
     private static void doLogin(WebDriver driver) {
-        driver.findElement(By.xpath("//*[@name='cp1']")).sendKeys("gu32fur");
-        driver.findElement(By.xpath("//*[@name='cp2']")).sendKeys("12TeRo34");
+        final By user = By.xpath("//*[@name='cp1']");
+        final By password = By.xpath("//*[@name='cp2']");
+        driver.findElement(user).sendKeys("gu32fur");
+        driver.findElement(password).sendKeys("12TeRo34");
         driver.findElement(By.xpath("//*[text()='Anmeldung']")).click();
 
     }
