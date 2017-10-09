@@ -10,7 +10,7 @@ public class CSSSelectorLocateElementDemo4 {
 
     private static WebDriver driver;
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         driver = setupWebDriver();
         final String cssSelector = "div.od-flightsManager-cell.pax_selector .od-moreoptions-arrow.ficon.collapsed";
@@ -18,6 +18,8 @@ public class CSSSelectorLocateElementDemo4 {
         WebElement element = driver.findElement(By.cssSelector(cssSelector));
         System.out.println(" " +  element.getAttribute("class") + " " +  element.isDisplayed());
 
+        Thread.sleep(1000);
+        
         element.click();
         //driver.close();
     }
