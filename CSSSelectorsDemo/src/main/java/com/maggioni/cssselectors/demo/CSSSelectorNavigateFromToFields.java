@@ -36,17 +36,16 @@ public class CSSSelectorNavigateFromToFields {
     }
 
     private static WebElement findElement(final String cssSelectorToAirport) throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         return driver.findElement(By.cssSelector(cssSelectorToAirport));
    
     }
 
     private static void setupWebDriver() {
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Angelo\\Downloads\\chromedriver_win32\\chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Maggioni\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Angelo\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Maggioni\\Downloads\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.opodo.de/");
-        return;
     }
 
 }
